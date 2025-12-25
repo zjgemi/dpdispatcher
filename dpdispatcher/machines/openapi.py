@@ -188,7 +188,6 @@ class OpenAPI(Machine):
             if self.remote_profile.get("output_log"):
                 job_log = self.job.log(job_id)
                 print(job_log, end="")
-            self._download_job(job)
         elif self.remote_profile.get("output_log") and job_state == JobStatus.running:
             job_log = self.job.log(job_id)
             print(job_log, end="")
